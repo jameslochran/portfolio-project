@@ -34,7 +34,7 @@
               <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
 
 
-              
+
 
 
           </div>
@@ -46,8 +46,12 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Hi I'm Jim</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <h1 class="jumbotron-heading">Welcome to My Portfolio Site</h1>
+          <p class="lead text-muted text-center">This site is part of my <mark>lab</mark> for various test projects that I'm working on.
+          <br>
+          Please send me an email if you would like to learn more about any of these project.
+          <br>
+            While you're here check out my <a href="{% url 'allblogs' %}">blog.</a>  </p>
           <p>
             <a href="mailto:jlochran@gmail.com" class="btn btn-primary my-2">Contact Me</a>
 
@@ -63,6 +67,7 @@
             {% for job in jobs.all %}
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+                <h3 class="text-center">{{ job.title }}</h3>
                 <img class="card-img-top" src="{{ job.image.url }}" />
                 <div class="card-body">
                   <p class="card-text"> {{ job.summary }}</p>
