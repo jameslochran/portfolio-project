@@ -43,11 +43,13 @@
     </header>
 
     <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Welcome to My Portfolio Site</h1>
-          <p class="lead text-muted text-center">This site is part of my <mark>working lab</mark> for the various projects I'm working on.
+      {% load staticfiles %}
+          <div class="carousel slide">
+          <div class="carousel-item active">
+            <img src="{% static 'laptop-1478822_1920.jpg' %}" class="id-block w-100" alt="Responsive image">
+        <div class="carousel-caption d-md-block ">
+          <h1>Welcome to My Portfolio Site</h1>
+          <p>This site is part of my <mark>working lab</mark> for the various projects I'm working on.
           <br>
           Please contact me if you'd like to learn more about any of these project.
           <br>
@@ -56,9 +58,21 @@
             <a href="mailto:jlochran@gmail.com" class="btn btn-primary my-2">Contact Me</a>
 
           </p>
-          <img src="{% static 'headshot.png' %}" height='300'/>
-        </div>
-      </section>
+
+          <br>
+
+      </div>
+      </div>
+      </div>
+
+
+
+
+
+
+
+
+
 
       <div class="album py-5 bg-light">
         <div class="container">
