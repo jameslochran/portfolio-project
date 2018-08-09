@@ -35,7 +35,7 @@
               <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
 
 
-              
+
 
 
           </div>
@@ -62,7 +62,8 @@
                 <a class="text-dark" href="{% url 'detail' post.id %}">{{ post.title }}</a>
               </h3>
               <div class="mb-1 text-muted">{{ post.pub_date_pretty}}</div>
-              <p class="card-text mb-auto">{{ post.summary }}</p>
+              <p class="card-text mb-auto pb-3">{{ post.summary }}</p>
+
               <a href="{% url 'detail' post.id %}">
               <button class='btn btn-secondary btn-sm'type="button" name="Read more...">Read More...</button>
               </a>
