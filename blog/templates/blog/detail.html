@@ -52,9 +52,11 @@
 <br>
         <img class='img-fluid' src="{{ detailblog.image.url }} "></p>
         <br>
-        <pre>
+        {% autoescape off %}
+
+
         <p>{{ detailblog.body}}</p>
-      </pre>
+    {% endautoescape %}
         <br>
         <hr>
         <br>
