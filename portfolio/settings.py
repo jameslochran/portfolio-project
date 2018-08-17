@@ -146,10 +146,9 @@ try:
 except ImportError:
     pass
 
-#email configuration - Need to change these and add them to the local_settings fule
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER =
-EMAIL_HOST_PASSWORD = 
+EMAIL_HOST_USER = 'jimlochran@gmail.com'
+EMAIL_HOST_PASSWORD = 'OmlGml01'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
