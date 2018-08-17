@@ -13,6 +13,4 @@ DATABASES = {
 
           }
 }
-
-
 DEBUG = False
