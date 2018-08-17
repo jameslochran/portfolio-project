@@ -1,4 +1,4 @@
-SECRET_KEY = '#@w7*a)12_d-e1r%uo(=45p3l(x13zp2m#1t8a1$b6kurv^^hotdoge5'
+SECRET_KEY = '#@w7*a)12_d-e1r%uo(=45p3l(x13zp2m#1t8a1$b6kurv^^'
 
 ALLOWED_HOSTS = ['167.99.154.197', 'jlochran.com', 'www.jlochran.com']
 
@@ -17,8 +17,8 @@ DATABASES = {
 #Email host configuration
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'jimlochran@gmail.com'
-EMAIL_HOST_PASSWORD = 'OmlGml01'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
