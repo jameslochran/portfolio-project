@@ -3,9 +3,9 @@
 {% load staticfiles %}
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="Portfolio website">
+    <meta name="author" content="James lochran">
 
 
     <title>James Lochran's Portfolio</title>
@@ -13,31 +13,71 @@
     <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'open-iconic-master\font\css\open-iconic-bootstrap.css' %}">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- Custom styles for this template -->
 
   </head>
+  <style>
+.hero-image {
+  background-image: url("{% static 'head.png' %}");
+  background-color: #f8f6f6;
+  height: 300px;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+  .hero-image {
+    background-image: url("{% static 'head_sm.png' %}");
+    background-color: #f8f6f6;
+    height: 300px;
+    /* background-position: left; */
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    position: relative;
+  }
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+</style>
 
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home'%}">James Lochran</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home'%}">James Lochran <br> <small class="text-muted"> Business and Technology Problem Solver</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ml-auto"   >
 
-              <a class="nav-item nav-link" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>
-
-
+              <!-- <a class="nav-item nav-link" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a> -->
+              <!-- <a class="nav-item nav-link" href="{% url 'home'%}#projects">Projects </a> -->
+              <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Experience
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'home'%}#projects">Projects </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{% url 'home'%}#technology">Technology Skills </a>
+          <a class="dropdown-item" href="#development">Development Platforms</a>
+          <a class="dropdown-item" href="#cloud">Cloud Environments</a>
+        </div>
+      </li>
               <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
-
-
-
-
-
           </div>
         </div>
       </nav>
@@ -45,40 +85,82 @@
 
     <main role="main">
       {% load staticfiles %}
-          <div class="carousel slide">
-          <div class="carousel-item active">
-            <img src="{% static 'laptop-1478822_1920.jpg' %}" class="id-block w-100" alt="Responsive image">
-        <div class="carousel-caption d-none d-md-block ">
-          <h2>Welcome to My Portfolio Site</h2>
-          <p>This site is part of my <mark>working lab</mark> for the various projects I'm working on.</p>
-
-          <p>Please contact me if you'd like to learn more about any of these project.</p>
-
-          <p>  While you're here check out my <a href="{% url 'allblogs' %}">blog.</a>  </p>
-          <p>
-            <a href="mailto:jlochran@gmail.com" class="btn btn-secondary my-2">Contact Me</a>
-
-          </p>
-
-          <br>
-
+      <div class="container-fluid">
+          <div class="hero-image ">
+            <!-- <img src="{% static 'welcome_background.png' %}" class="img-fluid" alt="Responsive image"> -->
+            <div class="hero-text">
+<br>
+            <h1 class="display-4">
+                Standout from the crowd</h1>
+                <br>
+              <p class="h4"><strong>See how I can help</strong>
+              </p>
+              <div class="d-none d-md-block">
+                <br>
+              <small class="text-muted">Below are some of the services that I offer and some examples of my work.</small>
+                </div>
+              <!-- <p>  While you're here check out my <a href="{% url 'allblogs' %}">blog.</a>  </p> -->
+              <!-- <p><a href="mailto:jlochran@gmail.com" class="btn btn-secondary my-2">Contact Me</a>
+              </p> -->
+              </div>
+          </div>
+        </div>
+<br>
+<div class="container pt-3">
+          <div class="card-deck">
+            <div class="card">
+              <img src="{% static 'responsive.png' %}" class="card-img-top" style="width: 100px !important; align-self: center; padding-top: 10px;"  alt="Web Development">
+              <div class="card-body">
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text">
+              <dl>
+                  <dt>Website design / development</dt>
+                  <dd>Update or create a new website for your organization, using modern design principles and technologies</dd>
+                  <dt>Web applications</dt>
+                  <dd>Custom built applications to enable quick access your products / services </dd>
+                  <dt>Automation</dt>
+                  <dd>Automate repeative tasks allowing your organization to operate at peak efficency</dd>
+                </dl>
+            </p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'seo(1).png' %}" style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Digital Marketing</h5>
+                  <p class="card-text">
+                    <dl>
+                        <dt>Inbound Marketing</dt>
+                        <dd>Email campaigns, newsletters, landing pages - all of the components needed to enable your organization to turn web traffic into leads</dd>
+                        <dt>Marketing Automation</dt>
+                        <dd>Don't let your marketing dominate your time - automate simple marketing tasks</dd>
+                        <dt>Return on Investment(ROI)</dt>
+                        <dd>Optimize your marketing spend to achieve real results and increased ROI</dd>
+                      </dl>
+              </p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'analytics(1).png' %}" style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Business Analytics</h5>
+                <p class="card-text">
+                  <dl>
+                      <dt>Data Gathering</dt>
+                      <dd>Put systems / mechanisms in place to gather relevant business data</dd>
+                      <dt>Data Analysis</dt>
+                      <dd>Aggregate business data from across the organization and highlight key trends / outliers </dd>
+                      <dt>Data Driven Decisions</dt>
+                      <dd>Make decisions quickly with acurate and up to date information</dd>
+                    </dl>
+                </p>
+              </div>
+            </div>
+          </div>
       </div>
-      </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
         <div class="container pt-3">
+          <a name="projects"></a>
           <h2>Check out some of my recent projects</h2>
-
           <div class="row pt-3">
             {% for job in jobs.all %}
             <div class="col-md-4">
@@ -89,7 +171,6 @@
                   {% autoescape off %}
                   <p class="card-text"> {{ job.summary }}</p>
                   {% endautoescape %}
-
                 </div>
               </div>
             </div>
@@ -97,9 +178,7 @@
                   </div>
                   <hr>
                   <br>
-
-
-
+                  <a name="technology"></a>
                   <h2>Technology Skills</h2>
                     <div class="jumbotron pt-3 d-none d-md-block">
                   <div class="row ">
@@ -117,38 +196,31 @@
                     </div>
                     <div class="col-2">
                 <h4>  <span class="oi oi-spreadsheet">  Databases</span></h4>
-
                     </div>
-
                   </div>
                     </div>
-
                   <hr>
                     {% load staticfiles %}
+                    <a name="develpment"></a>
                   <h2>Platforms</h2>
                       <div class="jumbotron pt-3">
                   <div class="row pt-3">
                     <div class="col-2">
                         <img src="{% static '278px-Django_logo.svg.png' %}" class="img-fluid" />
-
                     </div>
                     <div class="col-2">
                       <img src="{% static 'Boostrap_logo.svg.png' %}" class="img-fluid" />
-
                     </div>
                     <div class="col-2">
                     <img src="{% static 'dash.JPG' %}" class="img-fluid" />
-
                     </div>
-
                     <div class="col-2">
                       <img src="{% static '180px-Postgresql_elephant.svg.png' %}" class="img-fluid" />
-
-                    </div>
-
+                  </div>
                   </div>
                 </div>
                 <hr>
+                <a name="cloud"></a>
                 <h2>Cloud Environments</h2>
                     <div class="jumbotron pt-3">
                 <div class="row pt-3">
@@ -166,22 +238,8 @@
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
                 </div>
-
-
-
-
-
-
     </main>
-
     <footer class="text-muted">
       <a name="contact"></a>
     <div class="container">
@@ -196,19 +254,17 @@
           <a href="http://facebook.com/jameslochran"><i class="fab fa-facebook-f"></i> Facebook</a> or
           <a href="http://linkedin.com/in/jameslochran"><i class="fab fa-linkedin-in"></i> LinkedIn</a> or
           <a href="http://github.com/jameslochran"><i class="fab fa-github"></i> Github</a>
-
         </div>
       </div>
           </div>
+          <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
     </div>
     </footer>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
   </body>
 </html>

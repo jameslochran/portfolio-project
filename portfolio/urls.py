@@ -24,4 +24,5 @@ urlpatterns = [
     path('', jobs.views.home, name='home'),
     path('blog/', include('blog.urls')),
     path('', include('sendemail.urls')),
+    path('', include('todolist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
