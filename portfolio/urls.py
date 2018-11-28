@@ -22,6 +22,7 @@ import jobs.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', jobs.views.home, name='home'),
+    path('contact', jobs.views.contact, name='contact'),
     path('blog/', include('blog.urls')),
     path('', include('sendemail.urls')),
     path('', include('todolist.urls')),
