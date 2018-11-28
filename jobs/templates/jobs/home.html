@@ -50,9 +50,13 @@
   color: black;
 }
 
+
+
 </style>
 
   <body>
+<div class="container-fluid sticky-top">
+
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -62,6 +66,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ml-auto"   >
+            <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        My Services
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'home'%}#webdev">Web Development </a>
+            <a class="dropdown-item" href="#inbound">Digital Marketing</a>
+            <a class="dropdown-item" href="#analytics">Business Analytics</a>
+      </div>
+      </li>
 
               <!-- <a class="nav-item nav-link" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a> -->
               <!-- <a class="nav-item nav-link" href="{% url 'home'%}#projects">Projects </a> -->
@@ -77,11 +91,13 @@
           <a class="dropdown-item" href="#cloud">Cloud Environments</a>
         </div>
       </li>
+        <a class="nav-item nav-link" href="{% url 'email' %}">My Contact Info</a>
               <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
           </div>
         </div>
       </nav>
     </header>
+    </div>
 
     <main role="main">
       {% load staticfiles %}
@@ -93,11 +109,11 @@
             <h1 class="display-4">
                 Standout from the crowd</h1>
                 <br>
-              <p class="h4"><strong>See how I can help</strong>
+              <p class="h4"><a href="#services"><strong>See how I can help</strong></a>
               </p>
               <div class="d-none d-md-block">
                 <br>
-              <small class="text-muted">Below are some of the services that I offer and some examples of my work.</small>
+              <small class="text-muted">Below are some of the services I offer and some examples of my work.</small>
                 </div>
               <!-- <p>  While you're here check out my <a href="{% url 'allblogs' %}">blog.</a>  </p> -->
               <!-- <p><a href="mailto:jlochran@gmail.com" class="btn btn-secondary my-2">Contact Me</a>
@@ -105,7 +121,9 @@
               </div>
           </div>
         </div>
+        <a name="services"></a>
 <br>
+
 <div class="container pt-3">
           <div class="card-deck">
             <div class="card">
@@ -121,6 +139,7 @@
                   <dt>Automation</dt>
                   <dd>Automate repeative tasks allowing your organization to operate at peak efficency</dd>
                 </dl>
+                <a href="#webdev"><button type="button" class="btn btn-outline-info" >Learn more..</button></a>
             </p>
               </div>
             </div>
@@ -137,6 +156,7 @@
                         <dt>Return on Investment(ROI)</dt>
                         <dd>Optimize your marketing spend to achieve real results and increased ROI</dd>
                       </dl>
+                      <a href="#inbound"><button type="button" class="btn btn-outline-info">Learn more..</button></a>
               </p>
               </div>
             </div>
@@ -153,11 +173,243 @@
                       <dt>Data Driven Decisions</dt>
                       <dd>Make decisions quickly with acurate and up to date information</dd>
                     </dl>
+                    <a href="#analytics"><button type="button" class="btn btn-outline-info">Learn more..</button></a>
                 </p>
               </div>
             </div>
           </div>
       </div>
+  <a name="webdev"></a>
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <h2>Web Development</h2>
+        <br>
+  <div class="card-columns">
+  <div class="card">
+    <img class="card-img-top" src="{% static '019-responsive.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Mobile First Design</h5>
+      <p class="card-text"><em>Is your site mobile ready?</em> I can help create a mobile first approach to your entire site or an area within your site. </p>
+    </div>
+  </div>
+  <div class="card p-3">
+    <!-- <img class="card-img-top" src="{% static '003-applications.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap"> -->
+    <div class="card-body">
+      <h5 class="card-title">HTTPS Secure Domain</h5>
+      <p class="card-text">Starting in 2018 Google Chrome began to informing users that HTTP sites are not secure. </p>
+      <p class="card-text"><small class="text-muted">Is your site still using HTTP?</small></p>
+
+  </div>
+</div>
+<!-- <div class="card ">
+  <img class="card-img-top" src="{% static '003-applications.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Secure Domain</h5>
+    <p class="card-text">Starting in 2018 Google Chrome began to informing users that HTTP sites are not sure. </p>
+    <p class="card-text"><small class="text-muted">Is your site not secure?</small></p>
+
+</div>
+</div> -->
+<div class="card bg-info text-white  p-2">
+
+  <blockquote class="blockquote mb-0">
+    <dl>
+      <dt style="font-size: medium;" >A successful website does three things:</dt>
+
+      <dd style="font-size: small;">It attracts the right kinds of visitors.</dd>
+      <dd style="font-size: small;">Guides them to the main services or product you offer.</dd>
+      <dd style="font-size: small;">Collect Contact details for future ongoing relation.</dd>
+    </dl>
+<footer class="blockquote-footer text-white">
+        <small>
+        Mohamed Saad
+      </small>
+    </footer>
+  </blockquote>
+</div>
+  <div class="card">
+    <img class="card-img-top" src="{% static '006-browser.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Native App or PWA</h5>
+      <p class="card-text">What's the best strategy for your business applications?</p>
+      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+    </div>
+
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <img class="card-img-top" src="{% static '001-algorithm.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+
+      <h5 class="card-title">Automate</h5>
+      <p class="card-text">Don't Repeat Yourself - automate repeative tasks (reports, lead followup, backups, etc.) </p>
+
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <img class="card-img-top" src="{% static '016-machine.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+
+      <h5 class="card-title">Chatbot</h5>
+      <p class="card-text">Highly customizable extensions to your sales or support teams, provide 24X7 coverage for clients.</p>
+    </div>
+  </div>
+</div>
+</div>
+  <a name="inbound"></a>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center ">
+<h2>Digital Marketing</h2>
+<br>
+<div class="card-columns">
+<div class="card">
+  <img class="card-img-top" src="{% static '029-website-1.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+<div class="card-body">
+<h5 class="card-title">Email Marketing</h5>
+<p class="card-text">I'll help you create compelling email campaings that generate high quality leads. </p>
+<footer class="blockquote-footer">
+<small class="text-muted">
+Newsletters, Drip Marketing, PR, Special Events, etc.
+</small>
+</footer>
+</div>
+</div>
+<div class="card bg-success text-white text-center p-3">
+<blockquote class="blockquote mb-0 card-body">
+<p>Marketing is no longer about the stuff that you make, but about the stories you tell.</p>
+<footer class="blockquote-footer text-white">
+<small>
+Seth Godin
+</small>
+</footer>
+</blockquote>
+</div>
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">GDPR</h5>
+<p class="card-text">Put the required mechanisms in place to be in compliance with this EU mandate.</p>
+<footer class="blockquote-footer">
+<small class="text-muted">
+How does GDPR impact your business?
+</small>
+</footer>
+</div>
+</div>
+<div class="card text-center">
+  <img class="card-img-top" src="{% static '026-structure.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+<div class="card-body">
+<h5 class="card-title">Marketing Automation</h5>
+<p class="card-text">Automate the capture, qualifing and segmentation of leads.</p>
+</div>
+</div>
+<div class="card text-center">
+  <img class="card-img-top" src="{% static 'erd.JPG' %}" style="width: 200px !important; align-self: center; padding-top: 10px;"  alt="Card image cap">
+<div class="card-body">
+  <p class="card-text">Re-image what a digital newsletter can look like!</p>
+
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Results</h5>
+<p class="card-text">Don't waste money on marketing efforts that don't produce tangible results. </p>
+<p class="card-text">Put mechanisms in place to measure the results of each campaign in real-time so you can make adjustments. </p>
+<!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+</div>
+</div>
+</div>
+</div>
+        <a name="analytics"></a>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+          <h2>Business Analytics</h2>
+          <br>
+          <div class="card-columns">
+      <div class="card">
+        <img class="card-img-top" src="{% static '028-website.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Key Performance Indicators</h5>
+        <p class="card-text">Create measurement points within your infrastructure to track customer engagement to gauge effectiveness.</p>
+        <footer class="blockquote-footer">
+          <small class="text-muted">
+          Conversions, Click Through Rate, Abandonment, Social Interactions, etc.
+          </small>
+        </footer>
+
+      </div>
+      </div>
+      <!-- <div class="card">
+      <img class="card-img" src=".../100px260/" alt="Card image">
+      </div> -->
+      <!-- <div class="card p-3">
+      <blockquote class="blockquote mb-0 card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer class="blockquote-footer">
+          <small class="text-muted">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+          </small>
+        </footer>
+      </blockquote>
+      </div> -->
+      <div class="card">
+      <!-- <img class="card-img-top" src=".../100px160/" alt="Card image cap"> -->
+      <div class="card-body">
+        <h5 class="card-title">Product Roadmapping</h5>
+        <p class="card-text">Create and communicate product / service improvements using Agile/Scrum techiques.</p>
+        <p class="card-text"><small class="text-muted">Deliver results your clients want faster!</small></p>
+
+      </div>
+      </div>
+      <!-- <div class="card text-center">
+      <blockquote class="blockquote mb-0">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+        <footer class="blockquote-footer">
+          <small>
+            Someone famous in <cite title="Source Title">Source Title</cite>
+          </small>
+        </footer>
+      </blockquote>
+      </div> -->
+      <!-- <div class="card">
+        <img class="card-img-top" src="{% static '002-analysis.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+
+      </div> -->
+      <div class="card text-center">
+        <img class="card-img-top" src="{% static '002-analysis.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+
+      <div class="card-body">
+        <h5 class="card-title">Data Analysis</h5>
+        <p class="card-text">Cull through your data to spot patterns, trends and other key indicators for opportunities for growth or cost reduction.</p>
+        <p class="card-text"><small class="text-muted">Spreadsheets, Database, Invoices, Logs, Tickets, etc.</small></p>
+      </div>
+      </div>
+
+      <div class="card text-center">
+        <img class="card-img-top" src="{% static '023-simulation.png' %}"  style="width: 100px !important; align-self: center; padding-top: 10px;" alt="Card image cap">
+
+      <div class="card-body">
+        <h5 class="card-title">Decisions</h5>
+        <p class="card-text">Make quick decision based on the data and your instincts. </p>
+        <!-- <p class="card-text"><small class="text-muted"></small></p> -->
+      </div>
+      </div>
+      <div class="card bg-secondary text-white text-center p-3">
+        <blockquote class="blockquote mb-0">
+
+        <p >Not everything that can be counted counts, and not everything that counts can be counted.</p>
+        <footer class="blockquote-footer text-white">
+          <small>
+            Albert Einstein
+          </small>
+        </footer>
+      </blockquote>
+      </div>
+      </div>
+      </div>
+                        </div>
+
+
+
+
+
+
         <div class="container pt-3">
           <a name="projects"></a>
           <h2>Check out some of my recent projects</h2>
@@ -201,7 +453,7 @@
                     </div>
                   <hr>
                     {% load staticfiles %}
-                    <a name="develpment"></a>
+                    <a name="development"></a>
                   <h2>Platforms</h2>
                       <div class="jumbotron pt-3">
                   <div class="row pt-3">
@@ -256,8 +508,16 @@
           <a href="http://github.com/jameslochran"><i class="fab fa-github"></i> Github</a>
         </div>
       </div>
+
+      <address>
+        <p style="text-align: center;">James Lochran - <strong>Phone:</strong> 207.752.0365  | <strong> Email: </strong><a href="mailto:jlochran@gmail.com?subject=contact">jlochran@gmail.com</a>
+</p>
+
+        </address>
+
+
           </div>
-          <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+          <div><small>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></div>
     </div>
     </footer>
     <!-- Bootstrap core JavaScript

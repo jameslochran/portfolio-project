@@ -11,7 +11,7 @@ def emailView(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
+            from_email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             recipient_list = ['jimlochran@gmail.com']
             try:
